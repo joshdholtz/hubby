@@ -1,0 +1,75 @@
+fastlane_require "dotenv"
+
+before_all do
+  UI.important "Loading secret environment variables"
+  Dotenv.load ".env.secret"
+end
+
+desc "Create app on developer portal and App Store Connect if needed"
+lane :create_app do
+  produce
+end
+
+platform :ios do
+  before_all do
+    UI.important "Loading iOS environment variables"
+    Dotenv.load ".env.ios"
+  end
+
+  desc "Bump version and build number"
+  lane :bump do
+    
+  end
+
+  desc "Sync signing"
+  lane :signing do
+    match
+
+    mapping = Actions.lane_context[SharedValues::MATCH_PROVISIONING_PROFILE_MAPPING]
+    update_code_signing_settings(
+      profile_name: mapping[ENV['MATCH_APP_IDENTIFIER']]
+    )
+
+#    update_project_provisioning(
+#      profile_specifier: mapping[ENV['MATCH_APP_IDENTIFIER']]
+#    )
+  end
+
+  desc "Build binary"
+  lane :build do
+    signing
+    build_ios_app
+  end
+
+  desc "Release binary"
+  lane :release do
+    build
+  end
+end
+
+platform :mac do
+  before_all do
+    UI.important "Loading macOS environment variables"
+    Dotenv.load ".env.mac"
+  end
+
+  desc "Bump version and build number"
+  lane :bump do
+
+  end
+
+  desc "Sync signing"
+  lane :signing do
+    match
+  end
+
+  desc "Build binary"
+  lane :build do
+    signing
+  end
+
+  desc "Release binary"
+  lane :release do
+    build
+  end
+end
