@@ -58,15 +58,22 @@ platform :mac do
   desc "Sync signing"
   lane :signing do
     match
+
+    mapping = Actions.lane_context[SharedValues::MATCH_PROVISIONING_PROFILE_MAPPING]
+    update_code_signing_settings(
+      profile_name: mapping[ENV['MATCH_APP_IDENTIFIER']]
+    )
   end
 
   desc "Build binary"
   lane :build do
     signing
+    build_mac_app
   end
 
   desc "Release binary"
   lane :release do
     build
+    deliver
   end
 end
