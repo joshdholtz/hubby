@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		03B35E4C244F3CD200907B8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B35E4B244F3CD200907B8A /* AppDelegate.swift */; };
 		03B35E4E244F3CD200907B8A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B35E4D244F3CD200907B8A /* SceneDelegate.swift */; };
-		03B35E50244F3CD200907B8A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B35E4F244F3CD200907B8A /* ContentView.swift */; };
 		03B35E52244F3CD300907B8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03B35E51244F3CD300907B8A /* Assets.xcassets */; };
 		03B35E55244F3CD300907B8A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03B35E54244F3CD300907B8A /* Preview Assets.xcassets */; };
 		03B35E58244F3CD300907B8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B35E56244F3CD300907B8A /* LaunchScreen.storyboard */; };
+		03B35EB5244F45C500907B8A /* HubbyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B35EB4244F45C500907B8A /* HubbyFramework.framework */; };
+		03B35EB6244F45C500907B8A /* HubbyFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03B35EB4244F45C500907B8A /* HubbyFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		03B35EB7244F45C500907B8A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				03B35EB6244F45C500907B8A /* HubbyFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		03B35E48244F3CD200907B8A /* HubbyiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HubbyiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B35E4B244F3CD200907B8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03B35E4D244F3CD200907B8A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		03B35E4F244F3CD200907B8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		03B35E51244F3CD300907B8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03B35E54244F3CD300907B8A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03B35E57244F3CD300907B8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03B35E59244F3CD300907B8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		03B35EA6244F444500907B8A /* HubbyFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HubbyFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03B35EB4244F45C500907B8A /* HubbyFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HubbyFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03B35EB5244F45C500907B8A /* HubbyFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +59,7 @@
 			children = (
 				03B35E4A244F3CD200907B8A /* HubbyiOS */,
 				03B35E49244F3CD200907B8A /* Products */,
+				03B35EA5244F444500907B8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,7 +76,6 @@
 			children = (
 				03B35E4B244F3CD200907B8A /* AppDelegate.swift */,
 				03B35E4D244F3CD200907B8A /* SceneDelegate.swift */,
-				03B35E4F244F3CD200907B8A /* ContentView.swift */,
 				03B35E51244F3CD300907B8A /* Assets.xcassets */,
 				03B35E56244F3CD300907B8A /* LaunchScreen.storyboard */,
 				03B35E59244F3CD300907B8A /* Info.plist */,
@@ -75,6 +92,15 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		03B35EA5244F444500907B8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03B35EB4244F45C500907B8A /* HubbyFramework.framework */,
+				03B35EA6244F444500907B8A /* HubbyFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,6 +111,7 @@
 				03B35E44244F3CD200907B8A /* Sources */,
 				03B35E45244F3CD200907B8A /* Frameworks */,
 				03B35E46244F3CD200907B8A /* Resources */,
+				03B35EB7244F45C500907B8A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -148,7 +175,6 @@
 			files = (
 				03B35E4C244F3CD200907B8A /* AppDelegate.swift in Sources */,
 				03B35E4E244F3CD200907B8A /* SceneDelegate.swift in Sources */,
-				03B35E50244F3CD200907B8A /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,21 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		03B35E6C244F3D0100907B8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B35E6B244F3D0100907B8A /* AppDelegate.swift */; };
-		03B35E6E244F3D0100907B8A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03B35E6D244F3D0100907B8A /* ContentView.swift */; };
 		03B35E70244F3D0100907B8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03B35E6F244F3D0100907B8A /* Assets.xcassets */; };
 		03B35E73244F3D0100907B8A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03B35E72244F3D0100907B8A /* Preview Assets.xcassets */; };
 		03B35E76244F3D0100907B8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03B35E74244F3D0100907B8A /* Main.storyboard */; };
+		03B35EB9244F468200907B8A /* HubbyFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B35EB8244F468200907B8A /* HubbyFramework.framework */; };
+		03B35EBA244F468200907B8A /* HubbyFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03B35EB8244F468200907B8A /* HubbyFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		03B35EAF244F44E600907B8A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				03B35EBA244F468200907B8A /* HubbyFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		03B35E68244F3D0100907B8A /* HubbyMacos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HubbyMacos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		03B35E6B244F3D0100907B8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		03B35E6D244F3D0100907B8A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		03B35E6F244F3D0100907B8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03B35E72244F3D0100907B8A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		03B35E75244F3D0100907B8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		03B35E77244F3D0100907B8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03B35E78244F3D0100907B8A /* HubbyMacos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HubbyMacos.entitlements; sourceTree = "<group>"; };
+		03B35EA9244F445500907B8A /* HubbyFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HubbyFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03B35EB0244F457600907B8A /* HubbyFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HubbyFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03B35EB2244F45B400907B8A /* HubbyFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HubbyFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		03B35EB8244F468200907B8A /* HubbyFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HubbyFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03B35EB9244F468200907B8A /* HubbyFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,6 +60,7 @@
 			children = (
 				03B35E6A244F3D0100907B8A /* HubbyMacos */,
 				03B35E69244F3D0100907B8A /* Products */,
+				03B35EA8244F445500907B8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				03B35E6B244F3D0100907B8A /* AppDelegate.swift */,
-				03B35E6D244F3D0100907B8A /* ContentView.swift */,
 				03B35E6F244F3D0100907B8A /* Assets.xcassets */,
 				03B35E74244F3D0100907B8A /* Main.storyboard */,
 				03B35E77244F3D0100907B8A /* Info.plist */,
@@ -74,6 +93,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		03B35EA8244F445500907B8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				03B35EB8244F468200907B8A /* HubbyFramework.framework */,
+				03B35EB2244F45B400907B8A /* HubbyFramework.framework */,
+				03B35EB0244F457600907B8A /* HubbyFramework.framework */,
+				03B35EA9244F445500907B8A /* HubbyFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -84,6 +114,7 @@
 				03B35E64244F3D0100907B8A /* Sources */,
 				03B35E65244F3D0100907B8A /* Frameworks */,
 				03B35E66244F3D0100907B8A /* Resources */,
+				03B35EAF244F44E600907B8A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -145,7 +176,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03B35E6E244F3D0100907B8A /* ContentView.swift in Sources */,
 				03B35E6C244F3D0100907B8A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

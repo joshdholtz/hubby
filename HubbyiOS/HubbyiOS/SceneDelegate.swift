@@ -9,6 +9,8 @@
 import UIKit
 import SwiftUI
 
+import HubbyFramework
+
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
