@@ -29,10 +29,6 @@ platform :ios do
     update_code_signing_settings(
       profile_name: mapping[ENV['MATCH_APP_IDENTIFIER']]
     )
-
-#    update_project_provisioning(
-#      profile_specifier: mapping[ENV['MATCH_APP_IDENTIFIER']]
-#    )
   end
 
   desc "Build binary"
@@ -44,6 +40,7 @@ platform :ios do
   desc "Release binary"
   lane :release do
     build
+    deliver
   end
 end
 
