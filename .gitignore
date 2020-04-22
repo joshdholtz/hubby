@@ -123,7 +123,6 @@ Temporary Items
 # End of https://www.gitignore.io/api/macos
 
 # fastlane
-.env
-.env.*
+.env.secret
 
 *.swp
