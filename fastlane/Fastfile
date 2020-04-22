@@ -47,6 +47,14 @@ platform :ios do
     deliver
 
     reset_git_repo
+
+    add_git_tag(tag: get_version_number)
+    push_git_tags
+
+    github_release = set_github_release(
+      name: last_git_tag,
+      tag_name: last_git_tag,
+    )
   end
 end
 
