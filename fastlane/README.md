@@ -28,7 +28,7 @@ Create app on developer portal and App Store Connect if needed
 ```
 fastlane ios bump
 ```
-Bump version and build number
+Bump version
 ### ios signing
 ```
 fastlane ios signing
@@ -52,7 +52,7 @@ Release binary
 ```
 fastlane mac bump
 ```
-Bump version and build number
+Bump version
 ### mac signing
 ```
 fastlane mac signing
