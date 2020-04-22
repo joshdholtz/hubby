@@ -58,7 +58,8 @@ platform :mac do
 
   desc "Bump version and build number"
   lane :bump do
-
+    increment_version_number(version_number: UI.input("Version number:"))
+    increment_build_number(build_number: Time.now.to_i)
   end
 
   desc "Sync signing"
