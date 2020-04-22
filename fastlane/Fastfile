@@ -16,10 +16,9 @@ platform :ios do
     Dotenv.load ".env.ios"
   end
 
-  desc "Bump version and build number"
+  desc "Bump version"
   lane :bump do
     increment_version_number(version_number: UI.input("Version number:"))
-    increment_build_number(build_number: Time.now.to_i)
   end
 
   desc "Sync signing"
@@ -43,6 +42,8 @@ platform :ios do
     ensure_git_status_clean
     ensure_git_branch
 
+    increment_build_number(build_number: Time.now.to_i)
+
     build
     deliver
 
@@ -51,9 +52,10 @@ platform :ios do
     add_git_tag(tag: get_version_number)
     push_git_tags
 
-    github_release = set_github_release(
+    set_github_release(
       name: last_git_tag,
       tag_name: last_git_tag,
+      description: ""
     )
   end
 end
@@ -64,10 +66,9 @@ platform :mac do
     Dotenv.load ".env.mac"
   end
 
-  desc "Bump version and build number"
+  desc "Bump version"
   lane :bump do
     increment_version_number(version_number: UI.input("Version number:"))
-    increment_build_number(build_number: Time.now.to_i)
   end
 
   desc "Sync signing"
@@ -90,6 +91,8 @@ platform :mac do
   lane :release do
     ensure_git_status_clean
     ensure_git_branch
+
+    increment_build_number(build_number: Time.now.to_i)
 
     build
     deliver
